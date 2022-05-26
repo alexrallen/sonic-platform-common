@@ -109,7 +109,7 @@ class SsdUtil(SsdBase):
         self.firmware = self._parse_re('Firmware Version:\s*(.+?)\n', self.ssd_info)
 
     def parse_innodisk_info(self):
-        self.health = self._parse_re('Health:\s*(.+?)%?', self.vendor_ssd_info)
+        self.health = self._parse_re('Health:\s*(.+?)%', self.vendor_ssd_info)
         self.temperature = self._parse_re('Temperature\s*\[\s*(.+?)\]', self.vendor_ssd_info)
 
     def parse_virtium_info(self):
